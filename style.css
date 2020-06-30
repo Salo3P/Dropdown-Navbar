@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.topbar {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+}
+
+.topbar-elements {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(82, 82, 82);
+    z-index: 100000;
+}
+
+.section1 {
+    width: 100%;
+    height: 150vh;
+}
+
+.menu-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(109, 109, 109);
+    list-style: none;    
+    transform: translateY(-100%);
+    z-index: 99999;
+    transition: transform .5s ease-in-out;
+}
+
+.menu-links li {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin: 6vh;
+}
+
+.menu-links.active {
+    transform: translateY(calc(0% + 10vh));
+    transition: transform .5s ease-in-out;
+}
+
+.line1, .line2, .line3 {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all .3s ease;
+}
+
+.burger {
+    position: relative;
+    left: 100px;
+    cursor: pointer;
+    
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);    
+}
+
+img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.search {
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    width: 200px;
+    right: 100px;
+    float: right;
+    border: none;
+    margin: 0 4px 0 4px;
+    transition: all .2s ease;
+}
+
+.search:focus {
+    width: 350px;
+}
+
+.submit {
+    position: absolute;
+    right: 40px;
+    float: right;
+    background-color: white;
+    padding: 12px;
+    width: 60px;
+    text-align: center;
+    border: none;
+}
